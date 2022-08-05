@@ -348,3 +348,91 @@
     }
 }
 
+.benefits {
+    background: #f5f2f0;
+    padding: 128px 0;
+    &__subtitle {
+        text-align: center;
+        text-transform: uppercase;
+        color: $title;
+        margin-bottom: 38px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $title;
+        width: 452px;
+        margin: 0 auto 80px;
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        margin: 0 -12px;
+    }
+
+    &__item {
+        margin: 0 12px;
+        width: calc(25% - 24px);
+        position: relative;
+        overflow: hidden;
+        min-height: 384px;
+        &:hover .benefits__item-info {
+            background: linear-gradient(to bottom, rgba(36, 39, 61, 0), rgba(1, 1, 1, 1));
+        }
+    }
+    &__item-img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 384px;
+    }
+    // background: rgba(36, 39, 61, 0);
+    // background: -webkit-linear-gradient(top, rgba(36, 39, 61, 0), rgba(1, 1, 1, 1));
+    // background: -moz-linear-gradient(top, rgba(36, 39, 61, 0), rgba(1, 1, 1, 1));
+    // background: linear-gradient(to bottom, rgba(36, 39, 61, 0), rgba(1, 1, 1, 1));
+
+    &__item-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        //padding: 0 32px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(36, 39, 61, 0);
+        background: -webkit-linear-gradient(top, rgba(36, 39, 61, 0), rgba(1, 1, 1, 0.7));
+        background: -moz-linear-gradient(top, rgba(36, 39, 61, 0), rgba(1, 1, 1, 0.7));
+        background: linear-gradient(to bottom, rgba(36, 39, 61, 0), rgba(1, 1, 1, 0.7));
+    }
+
+    &__item-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+       padding: 0 32px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 25px;
+        z-index: 10;
+        transition: all 0.3s;
+    }
+
+    &__info-text {
+        line-height: 24px;
+        color: #ffffff;
+        opacity: 0.78;
+        padding: 0 32px 32px;
+        transform: translateY(100%);
+        transition: all 0.3s;
+    }
+}
