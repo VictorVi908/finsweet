@@ -205,11 +205,7 @@
     }
 
     &__title {
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 64px;
         text-align: center;
-        text-transform: uppercase;
         margin-bottom: 82px;
     }
 
@@ -283,10 +279,6 @@
     }
 
     &__title {
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 64px;
-        text-transform: uppercase;
         margin-bottom: 54px;
     }
 
@@ -306,6 +298,9 @@
     }
     &__img--big {
         margin-top: 48px;
+    }
+    &__img--about {
+        margin-top: 60px;
     }
     &__celebrate-subtitle {
         margin-bottom: 30px;
@@ -346,6 +341,41 @@
             background-image: url("../images/love-arrow.svg");
         }
     }
+    &__mission {
+        margin-top: 64px;
+        color: $title;
+    }
+    &__mission-inner {
+        display: flex;
+        justify-content: center;
+        margin: 0 -12px;
+    }
+
+    &__mission-item {
+        max-width: 375px;
+        text-align: left;
+        justify-content: space-between;
+        margin: 0 12px;
+        width: calc(50% - 24px);
+    }
+
+    &__mission-subtitle {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__mission-title {
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        text-transform: uppercase;
+    }
+
+    &__mission-text {
+        line-height: 24px;
+        opacity: 0.78;
+    }
 }
 
 .benefits {
@@ -359,11 +389,7 @@
     }
 
     &__title {
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 64px;
         text-align: center;
-        text-transform: uppercase;
         color: $title;
         width: 452px;
         margin: 0 auto 80px;
@@ -442,11 +468,8 @@
     }
 
     &__title {
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 64px;
         text-align: center;
-        text-transform: uppercase;
+
         max-width: 554px;
         margin: 0 auto 80px;
     }
@@ -614,17 +637,14 @@
     &__window-title {
         margin-bottom: 40px;
         max-width: 370px;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 64px;
-        text-transform: uppercase;
-        &::after{
+
+        &::after {
             content: "";
             position: absolute;
             right: 48px;
             top: 50%;
             transform: translateY(-50%);
-            background-image: url('../images/quotes.png');
+            background-image: url("../images/quotes.png");
             width: 187px;
             height: 140px;
         }
@@ -648,3 +668,213 @@
     }
 }
 
+.blog {
+    padding: 128px 0;
+    color: $title;
+    &__subtitle {
+        margin-bottom: 33px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    &__items {
+        display: flex;
+        margin: 0 -12px;
+    }
+
+    &__item {
+        margin: 0 12px;
+        width: calc(25% - 24px);
+        background-color: $default;
+        padding: 48px 50px 51px 32px;
+        border-bottom: 16px solid transparent;
+        transition: all 0.4s;
+        &:hover {
+            border-bottom: 16px solid $button;
+        }
+    }
+    &__item-subtitle,
+    &__item-title,
+    &__item-text,
+    &__item-author,
+    &__item-date {
+        display: inline-block;
+        color: $title;
+    }
+
+    &__item-subtitle {
+        background: linear-gradient(109.61deg, #a54e2b -53.83%, #dc9853 62.61%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 23px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+    }
+
+    &__item-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        max-width: 220px;
+    }
+
+    &__item-text {
+        line-height: 24px;
+        opacity: 0.78;
+        max-width: 240px;
+        margin-bottom: 60px;
+    }
+
+    &__item-author {
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    &__item-date {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.about-top {
+    padding-top: 160px;
+    padding-bottom: 170px;
+    background-image: url("../images/about-top-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $title;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &__subtitle {
+        margin-bottom: 33px;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 64px;
+        text-transform: uppercase;
+    }
+}
+
+.about-benefits {
+    padding-bottom: 128px;
+    color: $title;
+
+    &__subtitle {
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 24px;
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0 auto 85px;
+        max-width: 450px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 96px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__item:nth-child(odd) {
+        flex-direction: row-reverse;
+        .about-benefits__info {
+            margin-left: 48px;
+            margin-right: 0;
+        }
+    }
+
+    &__info {
+        max-width: 500px;
+        margin-right: 24px;
+    }
+
+    &__info-title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__info-text {
+        line-height: 24px;
+        opacity: 0.78;
+    }
+}
+
+.team {
+    padding-bottom: 128px;
+    color: $title;
+    &__subtitle {
+        text-transform: uppercase;
+        margin-bottom: 34px;
+        text-align: center;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    &__items {
+        display: flex;
+        margin: 0 -12px;
+    }
+
+    &__item {
+        background: #f5f2f0;
+        margin: 0 12px;
+        width: calc(25% - 24px);
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    &__item-avatar {
+        border-radius: 50%;
+        margin-bottom: 30px;
+    }
+
+    &__item-name {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__item-role {
+        line-height: 24px;
+        opacity: 0.7;
+        margin-bottom: 20px;
+    }
+
+    &__item-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list-item {
+        margin: 0 10px;
+    }
+
+}

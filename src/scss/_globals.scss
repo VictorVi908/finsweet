@@ -22,7 +22,7 @@ ul {
 p {
     margin: 0;
 }
-img{
+img {
     max-width: 100%;
     object-fit: cover;
     height: auto;
@@ -38,7 +38,6 @@ img{
     margin: 0 auto;
     padding: 0 15px;
 }
-
 
 .main {
     flex: 1 0 auto;
@@ -59,4 +58,12 @@ img{
     &:hover {
         background: #f2c79b;
     }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    text-transform: uppercase;
+    color: $title;
 }
