@@ -197,7 +197,7 @@
 
 .relevance {
     color: $title;
-    padding-top: 128px;
+    margin-top: 128px;
     &__subheadline {
         text-align: center;
         text-transform: uppercase;
@@ -268,7 +268,7 @@
 }
 
 .love {
-    padding: 128px 0;
+    margin: 128px 0;
     color: $title;
     &__inner {
         text-align: center;
@@ -287,6 +287,7 @@
         margin: 0 auto;
         text-align: center;
         margin-bottom: 56px;
+        line-height: 24px;
     }
 
     &__items {
@@ -459,7 +460,7 @@
 }
 
 .event {
-    padding: 128px 0;
+    margin: 128px 0;
     color: $title;
     &__subtitle {
         text-transform: uppercase;
@@ -660,7 +661,7 @@
 }
 
 .blog {
-    padding: 128px 0;
+    margin: 128px 0;
     color: $title;
     &__subtitle {
         margin-bottom: 33px;
@@ -763,7 +764,7 @@
 }
 
 .about-benefits {
-    padding-bottom: 128px;
+    margin-bottom: 128px;
     color: $title;
 
     &__subtitle {
@@ -815,7 +816,7 @@
 }
 
 .team {
-    padding-bottom: 128px;
+    margin-bottom: 128px;
     color: $title;
     &__subtitle {
         text-transform: uppercase;
@@ -875,8 +876,8 @@
 }
 
 .event-schedule {
-    padding-top: 20px;
-    padding-bottom: 128px;
+   
+    margin-bottom: 128px;
     color: $title;
     &__title {
         margin-bottom: 80px;
@@ -887,7 +888,6 @@
         display: flex;
         margin: 0 -12px;
     }
-    
 
     &__item {
         background: #fff5eb;
@@ -906,7 +906,7 @@
         }
     }
 
-    &__item--white{
+    &__item--white {
         background-color: #fff;
     }
 
@@ -996,7 +996,7 @@
 }
 
 .recent-post {
-    padding: 128px 0;
+    margin: 128px 0;
     color: $title;
     &__subtitle {
         margin-bottom: 35px;
@@ -1055,7 +1055,7 @@
 }
 
 .all-blog {
-    padding-top: 0;
+    margin-top: 0;
     &__title {
         margin-bottom: 80px;
     }
@@ -1085,7 +1085,7 @@
 }
 
 .post {
-    padding: 128px 0;
+    margin: 128px 0;
     color: $title;
     &__subtitle-wrapper {
         text-align: center;
@@ -1210,8 +1210,8 @@
 }
 
 .invite {
-    padding-top: 128px;
-    padding-bottom: 98px;
+    margin-top: 128px;
+    margin-bottom: 98px;
     color: $title;
     &__inner {
         display: flex;
@@ -1291,7 +1291,10 @@
         line-height: 44px;
         margin-bottom: 45px;
     }
-
+    &__register-btn {
+        cursor: pointer;
+        border: none;
+    }
     &__register-info {
         display: flex;
         margin-bottom: 32px;
@@ -1332,4 +1335,125 @@
     }
 }
 
+.contact-top {
+    background-image: url("../images/contact-top-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 160px;
+    padding-bottom: 170px;
+    margin-bottom: 128px;
+    &__subtitle {
+        color: $button;
+        text-transform: uppercase;
+        margin-bottom: 34px;
+    }
+    &__title {
+        color: #fff;
+        max-width: 410px;
+    }
+}
 
+.contacts {
+    margin-bottom: 128px;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__field {
+        max-width: 625px;
+        margin-right: 64px;
+    }
+
+    &__field-title {
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+        color: #1e1b1b;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    &__form-input {
+        width: 100%;
+        border: none;
+        margin-bottom: 12px;
+        padding: 20px;
+    }
+
+    &__form-textarea {
+        margin-bottom: 12px;
+        width: 100%;
+        height: 120px;
+        border: none;
+        resize: none;
+        padding: 24px;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+    &__form-input,
+    &__form-textarea {
+        line-height: 24px;
+        color: $title;
+        border-radius: 4px;
+    }
+
+    &__form-btn {
+        width: 100%;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__info {
+        max-width: 300px;
+        margin-left: 63px;
+    }
+
+    &__info-item {
+        width: 100%;
+        margin-bottom: 40px;
+        & > span {
+            font-size: 18px;
+            line-height: 21px;
+            color: #1e1b1b;
+            opacity: 0.7;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        &:nth-child(2)>span{
+            width: 100%;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    &__info-place,
+    &__info-number,
+    &__info-email {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+        color:$title;
+    }
+    &__info-place{
+        max-width: 242px;
+    }
+    &__info-number{
+        margin-bottom: 12px;
+    }
+
+    &__info-list {
+        display: flex;
+    }
+
+    &__list-item {
+        margin-right: 32px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
