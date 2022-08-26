@@ -84,13 +84,17 @@
 
     &__phone,
     &__adress,
-    &__email {
+    &__email-text {
         margin-bottom: 16px;
         font-size: 12px;
         line-height: 14px;
         text-transform: uppercase;
         color: #ffffff;
         display: inline-block;
+    }
+    &__qucklinks,
+    &__connect{
+        padding: 0 10px;
     }
     &__quicklinks-title,
     &__connect-title {
@@ -170,7 +174,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     &__inner {
-        width: 592px;
+        max-width: 592px;
     }
     &__invite-title,
     &__title {
@@ -196,7 +200,7 @@
     &__text {
         line-height: 24px;
         color: #ffffff;
-        width: 308px;
+        max-width: 308px;
         position: relative;
         padding-left: 30px;
         &::before {

@@ -2,6 +2,7 @@ const benefits = document.querySelectorAll(".benefits__item");
 const menuButton = document.querySelector(".header__menu-btn");
 const contactButton = document.querySelector(".header__btn");
 const menu = document.querySelector(".menu");
+const html = document.querySelector("html");
 
 benefits.forEach(item => {
     const text = item.querySelector(".benefits__info-text")
@@ -36,18 +37,22 @@ benefits.forEach(item => {
 window.addEventListener("resize", function() {
     if (window.innerWidth > 860 && menu.classList.contains("menu--open") == true ) {
         menu.classList.remove("menu--open");
+        html.classList.remove("overflow-hidden");
         menu.style.display = "";
     };
 });
 
 menuButton.addEventListener('click', function () {
     if (menu.classList.contains("menu--open") == false) {
+        html.classList.add("overflow-hidden");
         menu.style.display = "block";
         setTimeout(function () {
             menu.classList.add("menu--open");
         }, 10);
         
     } else {
+        html.style.overflow = "";
+        html.classList.remove("overflow-hidden");
         menu.classList.remove("menu--open");
         setTimeout(function () {
             menu.style.display = "";

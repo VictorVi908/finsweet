@@ -1,3 +1,72 @@
+@media (max-width: 980px) {
+    .relevance {
+        margin-top: 70px;
+        &__title {
+            margin-bottom: 56px;
+        }
+        &__item {
+            padding: 65px;
+        }
+        &__subheadline {
+            margin-bottom: 22px;
+        }
+    }
+}
+@media (max-width: 960px) {
+    .footer {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__email-title {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+        &__form-btn {
+            padding: 17px 42px;
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    .footer {
+        &__email {
+            max-width: 100%;
+            width: 100%;
+        }
+        &__form-input {
+            width: 100%;
+        }
+        &__email-title {
+            text-align: center;
+        }
+        &__list-link {
+            font-size: 15px;
+        }
+        &__quicklinks-title {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 890px) {
+    .relevance {
+        &__item {
+            padding: 35px;
+            &-title {
+                font-size: 26px;
+                padding-top: 60px;
+            }
+            &-text {
+                font-size: 14px;
+            }
+        }
+        &__title {
+            font-size: 43px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
 @media (max-width: 860px) {
     .header {
         &__menu-btn {
@@ -57,11 +126,133 @@
     }
 }
 
+@media (max-width: 768px) {
+    .top {
+        padding: 55px 0;
+        &__inner {
+            width: 100%;
+        }
+        &__title {
+            font-size: 49px;
+            line-height: 54px;
+            margin-bottom: 21px;
+        }
+        &__invite-title {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        &__btn {
+            margin-bottom: 38px;
+            padding: 19px 47px;
+        }
+    }
+    .relevance {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 14px;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .footer {
+        &__email-title {
+            font-size: 24px;
+        }
+        &__list-link {
+            font-size: 13px;
+        }
+        &__quicklinks-title {
+            font-size: 15px;
+        }
+    }
+    .top {
+        padding: 45px 0;
+        &__title {
+            font-size: 39px;
+            line-height: 40px;
+            margin-bottom: 21px;
+        }
+        &__invite-title {
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+        &__btn {
+            margin-bottom: 38px;
+            padding: 14px 42px;
+        }
+    }
+    .relevance {
+        margin-top: 45px;
+        &__item{
+            padding: 20px;
+            &::after{
+                height: 8px;
+            }
+        }
+        &__item-title {
+            font-size: 18px;
+            margin-bottom: 0;
+            padding-top: 0;
+        }
+        .title--involved::before,
+        .title--about::before,
+        .title--giving::before{
+            display: none;
+        }
+        &__title {
+            font-size: 33px;
+            margin-bottom: 30px;
+            
+        }
+    }
+}
+
 @media (max-width: 450px) {
     .menu {
         width: 255px;
-        &__list-link,&-contact__btn  {
+        &__list-link,
+        &-contact__btn {
             padding: 15px 0;
+        }
+    }
+    .footer {
+        &__form-btn {
+            padding: 17px 35px;
+        }
+        &__email-title {
+            font-size: 20px;
+        }
+    }
+    .top {
+        padding: 55px 0;
+        &__inner {
+            width: 100%;
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 16px;
+        }
+        &__invite-title {
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        &__btn {
+            margin-bottom: 28px;
+            padding: 19px 47px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+    }
+    .relevance__items{
+        display: block;
+    }
+    .relevance__item{
+        margin: 10px 0;
+        &-title{
+            text-align: center;
         }
     }
 }
@@ -70,6 +261,18 @@
     .header {
         &__menu-btn {
             order: 2;
+        }
+    }
+    .footer {
+        &__form-btn {
+            padding: 13px 15px;
+            font-size: 14px;
+        }
+        &__form-input {
+            padding: 13px 30px 14px 20px;
+        }
+        &__email {
+            margin-top: 10px;
         }
     }
 }
