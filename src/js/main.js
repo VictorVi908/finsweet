@@ -19,8 +19,6 @@ benefits.forEach(item => {
             text.style.height = textHeight + 'px';
         }, 0);
 
-        console.log(text.style.height)
-
     });
     item.addEventListener("mouseleave", function () {
         text.style.height = 0;
