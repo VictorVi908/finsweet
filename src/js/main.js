@@ -4,36 +4,44 @@ const contactButton = document.querySelector(".header__btn");
 const menu = document.querySelector(".menu");
 const html = document.querySelector("html");
 
-benefits.forEach(item => {
-    const text = item.querySelector(".benefits__info-text")
-    const textHeight = text.offsetHeight;
-    console.log(textHeight);
-    text.style.display = 'none';
-    text.style.height = 0;
-    console.log(text.style.height)
 
-    item.addEventListener("mouseenter", function () {
-        text.style.display = '';
-        setTimeout(function () {
-            text.style.opacity = 0.78;
-            text.style.height = textHeight + 'px';
-        }, 0);
 
-    });
-    item.addEventListener("mouseleave", function () {
+
+if (window.innerWidth > 1024 && benefits.length > 0) {
+    benefits.forEach(item => {
+        const text = item.querySelector(".benefits__info-text")
+        const textHeight = text.offsetHeight;
+        let isHover = false;
+        text.style.display = 'none';
         text.style.height = 0;
-        text.style.opacity = '';
-        setTimeout(function () {
-            text.style.display = 'none';
-        }, 300);
 
+        item.addEventListener("mouseenter", function () {
+            isHover = true;
+            text.style.display = '';
+            setTimeout(function () {
+                text.style.opacity = 0.78;
+                text.style.height = textHeight + 'px';
+            }, 0);
+
+        });
+        item.addEventListener("mouseleave", function () {
+            isHover = false;
+            text.style.height = 0;
+            text.style.opacity = '';
+            setTimeout(function () {
+                if (!isHover) {
+                    text.style.display = 'none';
+                }
+            }, 300);
+
+        });
     });
-});
+}
 
 
 
-window.addEventListener("resize", function() {
-    if (window.innerWidth > 860 && menu.classList.contains("menu--open") == true ) {
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 860 && menu.classList.contains("menu--open") == true) {
         menu.classList.remove("menu--open");
         html.classList.remove("overflow-hidden");
         menu.style.display = "";
@@ -47,7 +55,7 @@ menuButton.addEventListener('click', function () {
         setTimeout(function () {
             menu.classList.add("menu--open");
         }, 10);
-        
+
     } else {
         html.style.overflow = "";
         html.classList.remove("overflow-hidden");

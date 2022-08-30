@@ -93,7 +93,7 @@
         display: inline-block;
     }
     &__qucklinks,
-    &__connect{
+    &__connect {
         padding: 0 10px;
     }
     &__quicklinks-title,
@@ -415,7 +415,7 @@
     &__title {
         text-align: center;
         color: $title;
-        width: 452px;
+        max-width: 452px;
         margin: 0 auto 80px;
     }
 
@@ -431,10 +431,14 @@
         position: relative;
         overflow: hidden;
         min-height: 384px;
-        &:hover .benefits__item-info {
-            -webkit-box-shadow: 8px -100px 85px -39px rgba(0, 0, 0, 1) inset;
-            -moz-box-shadow: 8px -100px 85px -39px rgba(0, 0, 0, 1) inset;
-            box-shadow: 8px -100px 85px -39px rgba(0, 0, 0, 1) inset;
+    }
+    @media (min-width: 1024px) {
+        &__item {
+            &:hover .benefits__item-info {
+                -webkit-box-shadow: 8px -100px 85px -39px rgba(0, 0, 0, 1) inset;
+                -moz-box-shadow: 8px -100px 85px -39px rgba(0, 0, 0, 1) inset;
+                box-shadow: 8px -100px 85px -39px rgba(0, 0, 0, 1) inset;
+            }
         }
     }
     &__item-img {
@@ -464,6 +468,7 @@
     }
 
     &__item-title {
+        margin-top: 7px;
         font-weight: 700;
         font-size: 24px;
         line-height: 28px;
@@ -647,22 +652,26 @@
         color: $title;
         border-bottom: 16px solid $button;
         position: relative;
+        
     }
 
     &__window-title {
         margin-bottom: 40px;
         max-width: 370px;
+        position: relative;
+        z-index: 10;
+    }
 
-        &::after {
-            content: "";
-            position: absolute;
-            right: 48px;
-            top: 50%;
-            transform: translateY(-50%);
-            background-image: url("../images/quotes.png");
-            width: 187px;
-            height: 140px;
-        }
+    &__window::after {
+        content: "";
+        position: absolute;
+        right: 48px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url("../images/quotes.png");
+        width: 187px;
+        height: 140px;
+        z-index: 1;
     }
 
     &__window-text {
@@ -670,6 +679,8 @@
         max-width: 302px;
         line-height: 24px;
         opacity: 0.78;
+        position: relative;
+        z-index: 10;
     }
 
     &__window-btn {
