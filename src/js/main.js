@@ -32,7 +32,7 @@ if (window.innerWidth > 1024 && benefits.length > 0) {
                 if (!isHover) {
                     text.style.display = 'none';
                 }
-            }, 300);
+            }, 500);
 
         });
     });

@@ -33,6 +33,7 @@
     flex: 1 0 auto;
     align-items: center;
     justify-content: space-between;
+    overflow: auto;
     &-contact__btn {
         padding: 20px 48px;
         display: inline-block;
@@ -448,6 +449,7 @@
         top: 0;
         bottom: 0;
         height: 384px;
+        width: 100%;
     }
 
     &__item-info {
@@ -461,7 +463,7 @@
         top: 0;
         right: 0;
         bottom: 0;
-        transition: all 0.3s;
+        transition: all 0.5s;
         -webkit-box-shadow: 8px -82px 40px -39px rgba(0, 0, 0, 0.63) inset;
         -moz-box-shadow: 8px -82px 40px -39px rgba(0, 0, 0, 0.63) inset;
         box-shadow: 8px -82px 40px -39px rgba(0, 0, 0, 0.63) inset;
@@ -476,14 +478,14 @@
         color: #ffffff;
         margin-bottom: 6px;
         z-index: 10;
-        transition: all 0.3s;
+        transition: all 0.5s;
     }
 
     &__info-text {
         line-height: 24px;
         color: #ffffff;
         opacity: 0;
-        transition: all 0.3s;
+        transition: all 0.5s;
     }
 }
 
@@ -729,7 +731,6 @@
     &__item-text,
     &__item-author,
     &__item-date {
-        display: inline-block;
         color: $title;
     }
 
