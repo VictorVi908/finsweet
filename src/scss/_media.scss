@@ -11,6 +11,9 @@
         &__program {
             padding-left: 30px;
         }
+        &__items {
+            justify-content: center;
+        }
     }
     .blog {
         &__item {
@@ -18,6 +21,21 @@
         }
         &__item-text {
             margin-bottom: 40px;
+        }
+    }
+    .event-schedule {
+        &__items {
+            justify-content: center;
+        }
+        &__program-adress {
+            margin-bottom: 40px;
+        }
+        &__program-body {
+            margin-left: 30px;
+            margin-right: 35px;
+        }
+        &__program-subtitle {
+            margin-left: 30px;
         }
     }
 }
@@ -57,6 +75,25 @@
             &-header {
                 margin-right: 20px;
             }
+        }
+    }
+    .event-schedule {
+        &__program-adress {
+            margin-bottom: 26px;
+        }
+        &__program-body {
+            margin-left: 22px;
+            margin-right: 22px;
+        }
+        &__program-subtitle {
+            margin-left: 22px;
+        }
+        &__body-text {
+            margin-bottom: 26px;
+        }
+        &__body-title {
+            margin-bottom: 16px;
+            font-size: 22px;
         }
     }
 }
@@ -105,12 +142,29 @@
             margin: 0 auto 40px;
         }
     }
-    .team__items{
+    .team__items {
         flex-wrap: wrap;
     }
-    .team__item{
+    .team__item {
         width: calc(50% - 24px);
         margin: 12px;
+    }
+    .event-schedule {
+        &__items {
+            flex-wrap: wrap;
+            margin: 0;
+        }
+        &__item {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            width: calc(50% - 24px);
+        }
+        &__item:first-child {
+            margin-left: 12px;
+        }
+        &__item:last-child {
+            margin-right: 12px;
+        }
     }
 }
 @media (max-width: 960px) {
@@ -202,6 +256,8 @@
             display: none;
         }
         &__program {
+            max-width: 50%;
+            margin: 0 auto;
             &-body {
                 max-width: 100%;
             }
@@ -298,7 +354,7 @@
             margin: 12px;
         }
     }
-    .team__title{
+    .team__title {
         margin-bottom: 30px;
     }
     .event__title,
@@ -307,7 +363,7 @@
     .team__title {
         font-size: 43px;
     }
-    
+
     .about-benefits__img {
         display: none;
     }
@@ -368,6 +424,7 @@
             }
         }
     }
+   
 }
 
 @media (max-width: 550px) {
@@ -382,13 +439,32 @@
     .blog__item-title {
         font-size: 21px;
     }
-    .team{
+    .team {
         margin-bottom: 80px;
-        &__item{
+        &__item {
             width: calc(100% - 24px);
         }
-        &__title{
+        &__title {
             font-size: 33px;
+        }
+    }
+    .event__program{
+        max-width: 100%;
+    }
+    .event-schedule {
+        &__items {
+            flex-wrap: wrap;
+            margin: 0;
+        }
+        &__item {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            width: calc(100% - 24px);
+        }
+        &__program-days,
+        &__program-adress,
+        &__body-text {
+            max-width: 100%;
         }
     }
 }
