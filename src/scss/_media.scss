@@ -39,6 +39,48 @@
         }
     }
 }
+@media (max-width: 1160px) {
+    .invite {
+        &__register {
+            margin-left: 40px;
+            padding: 25px;
+            &__btn {
+                padding: 24px 57px;
+            }
+            &-info {
+                flex-wrap: wrap;
+            }
+        }
+        &__item {
+            margin-right: 40px;
+        }
+    }
+    .recent-post {
+        &__img {
+            margin-right: 8px;
+        }
+        &__info{
+            margin-left: 10px;
+
+            &-title{
+                margin-bottom: 18px;
+                font-size: 29px;
+            }
+            &-text{
+                margin-bottom: 24px;
+            }
+            &-header{
+                margin-bottom: 11px;
+            }
+        }
+        &__inner {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+        
+    }
+}
+
 @media (max-width: 1024px) {
     .benefits {
         &__item {
@@ -95,6 +137,39 @@
             margin-bottom: 16px;
             font-size: 22px;
         }
+    }
+    .invite {
+        &__register {
+            &-title {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .recent-post {
+        &__img {
+            margin: 0 auto 20px;
+        }
+        &__info{
+            margin-left: 0;
+            margin: 0 auto;
+            text-align: center;
+            &-link:first-child{
+                margin-right: 10px;
+            }
+            &-text{
+                max-width: 100%;
+            }
+            &-header{
+                max-width: 100%;
+                justify-content: center;
+            }
+        }
+        &__inner {
+            padding: 35px;
+            flex-wrap: wrap;
+        }
+        
+        
     }
 }
 
@@ -164,6 +239,21 @@
         }
         &__item:last-child {
             margin-right: 12px;
+        }
+    }
+    .invite {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__register {
+            order: -1;
+            margin: 0 auto 20px;
+            width: 100%;
+        }
+        &__item {
+            margin: 0 auto;
         }
     }
 }
@@ -271,6 +361,20 @@
             margin-bottom: 29px;
         }
     }
+    .contacts__inner{
+        flex-wrap: wrap;
+    }
+    .contacts__info,.contacts__field{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .contacts__info{
+        margin-top: 20px;
+    }
+    .contact-top,.contacts{
+        margin-bottom: 80px;
+    }
+    
 }
 
 @media (max-width: 860px) {
@@ -424,7 +528,13 @@
             }
         }
     }
-   
+
+    .recent-post,.blog{
+        margin: 80px 0;
+    }
+    .post{
+        margin: 80px 0;
+    }
 }
 
 @media (max-width: 550px) {
@@ -448,10 +558,11 @@
             font-size: 33px;
         }
     }
-    .event__program{
+    .event__program {
         max-width: 100%;
     }
     .event-schedule {
+        margin-bottom: 80px;
         &__items {
             flex-wrap: wrap;
             margin: 0;
@@ -466,6 +577,24 @@
         &__body-text {
             max-width: 100%;
         }
+    }
+    .event-schedule__title {
+        margin-bottom: 45px;
+        font-size: 45px;
+    }
+    .invite {
+        &__item-img {
+            display: none;
+        }
+        &__item-title {
+            font-size: 45px;
+        }
+        &__item-quote {
+            font-size: 22px;
+        }
+    }
+    .recent-post,.blog{
+        margin: 55px 0;
     }
 }
 
@@ -592,6 +721,34 @@
             font-size: 28px;
         }
     }
+    .recent-post__title{
+        font-size: 33px;
+        margin-bottom: 35px;
+    }
+    .recent-post__inner{
+        padding: 35px 22px;
+    }
+    .recent-post__info-title{
+        font-size: 27px;
+    }
+    .post__title,
+    .post__box-top-title,
+    .contact-top__title{
+        font-size: 36px;
+    }
+    .post__img,
+    .post__box-bottom-title {
+        margin-bottom: 30px;
+    }
+    .post__img,
+    .post__box-top-img,
+    .recent-post__img{
+        width: 100%;
+        height: 300px;
+    }
+    .contact-top{
+        padding: 80px 0px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -647,6 +804,10 @@
     }
     .love__mission-title {
         font-size: 28px;
+    }
+    .invite__item-title,
+    .event-schedule__title {
+        font-size: 40px;
     }
 }
 
